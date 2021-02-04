@@ -31,6 +31,7 @@
         },
 
         mounted() {
+            console.log('hello')
             if(this.value) {
                 this.place = JSON.parse(this.value).value;
             }
