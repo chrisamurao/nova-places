@@ -1,5 +1,5 @@
 <template>
-    <span>{{ place }}</span>
+    <span>{{ place + 'x' }}</span>
 </template>
 
 <script>
