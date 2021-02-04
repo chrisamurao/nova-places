@@ -4,7 +4,7 @@
             <input :id="field.name" type="text"
                    class="w-full form-control form-input form-input-bordered hnassr-places"
                    :class="errorClasses"
-                   :placeholder="field.name"
+                   :placeholder="'fieldDotName'"
                    :value="place"
             />
 
@@ -31,7 +31,6 @@
         },
 
         mounted() {
-            console.log('hello')
             if(this.value) {
                 this.place = JSON.parse(this.value).value;
             }
@@ -69,7 +68,7 @@
              * Fill the given FormData object with the field's internal value.
              */
             fill(formData) {
-                formData.append(this.field.attribute, this.value || '')
+                formData.append(this.field.attribute, JSON.parse.(this.value) || '')
             },
 
             /**
